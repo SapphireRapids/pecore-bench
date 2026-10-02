@@ -1,0 +1,5 @@
+# Statically link the MSVC CRT so the single .exe runs on a bare Windows
+# install with no redistributable: copying the file to another x86-64 machine
+# is the whole installation procedure.
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]
