@@ -1,0 +1,14 @@
+[package]
+name = "pecore-bench"
+version = "0.1.0"
+edition = "2021"
+description = "Per-core (P-core vs E-core) CPU benchmark for Windows 11 hybrid CPUs"
+
+# No third-party crates: pure Win32 FFI + std, so it builds on any network.
+[dependencies]
+
+[profile.release]
+opt-level = 3
+codegen-units = 1
+lto = true
+panic = "abort"
