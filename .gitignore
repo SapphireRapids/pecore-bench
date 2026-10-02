@@ -1,0 +1,5 @@
+# Build output: the exe and the report it generates land here.
+/target/
+
+# Reports written next to the exe when running from the project root.
+/pecore-report/
